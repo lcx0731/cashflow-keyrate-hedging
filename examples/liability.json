@@ -1,0 +1,5 @@
+{
+  "curve": {"knots": [2, 5, 10], "rates": [0.025, 0.032, 0.038]},
+  "cashflows": {"times": [6], "amounts": [100]},
+  "knot_shifts_bp": [100, 0, -100]
+}

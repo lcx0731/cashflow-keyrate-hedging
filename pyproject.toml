@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cashflow-keyrate-hedging"
+version = "0.1.0"
+description = "Synthetic cashflow hedging with analytic zero-curve sensitivities and repricing audits"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = ["numpy>=2.2,<3"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9", "matplotlib>=3.10"]
+
+[project.urls]
+Repository = "https://github.com/lcx0731/cashflow-keyrate-hedging"
+
+[project.scripts]
+cashflow-risk = "cashflow_hedge.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+filterwarnings = ["error"]

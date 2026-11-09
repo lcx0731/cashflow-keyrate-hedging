@@ -1,0 +1,448 @@
+{
+  "data": "Deterministic synthetic cashflows and zero rates; no market observations.",
+  "use": "Educational only. Not investment advice.",
+  "curve": {
+    "knots_years": [
+      2.0,
+      5.0,
+      10.0
+    ],
+    "continuous_zero_rates": [
+      0.025,
+      0.032,
+      0.038
+    ]
+  },
+  "liability": {
+    "time_years": 6,
+    "amount": 100,
+    "present_value": 81.93859997441642
+  },
+  "hedges": {
+    "parallel": {
+      "mode": "parallel",
+      "status": "matched",
+      "holdings": [
+        43.06984091531057,
+        59.908776011202384
+      ],
+      "pv_weights_relative_to_liability": [
+        0.4999999999999996,
+        0.5000000000000003
+      ],
+      "gross_pv_multiple": 1.0,
+      "short_pv_multiple": 0.0,
+      "liability_value": 81.93859997441642,
+      "instrument_values": [
+        0.951229424500714,
+        0.6838614092123558
+      ],
+      "scaled_constraint_residual": [
+        0.0,
+        2.220446049250313e-16
+      ],
+      "matrix_rank": 2,
+      "constraint_count": 2,
+      "instrument_count": 2,
+      "singular_values": [
+        1.677032961426901,
+        0.47703296142690066
+      ],
+      "scaled_residual_tolerance": 1e-10,
+      "asset_maturities": [
+        2.0,
+        10.0
+      ],
+      "net_present_value": 0.0,
+      "net_dollar_dv01": [
+        0.008193859997441637,
+        -0.03933052798771989,
+        0.03113666799027827
+      ],
+      "net_parallel_dollar_convexity": 1311.0175995906648
+    },
+    "keyrate": {
+      "mode": "keyrate",
+      "status": "matched",
+      "holdings": [
+        26.504517486345076,
+        -42.58265302767162,
+        149.68906319298236,
+        -33.79469416016548
+      ],
+      "pv_weights_relative_to_liability": [
+        0.30769230769230876,
+        -0.461538461538462,
+        1.4358974358974363,
+        -0.2820512820512825
+      ],
+      "gross_pv_multiple": 2.4871794871794894,
+      "short_pv_multiple": 0.7435897435897445,
+      "liability_value": 81.93859997441642,
+      "instrument_values": [
+        0.951229424500714,
+        0.8881037860236737,
+        0.7859988104315035,
+        0.6838614092123558
+      ],
+      "scaled_constraint_residual": [
+        6.661338147750939e-16,
+        1.457167719820518e-16,
+        0.0,
+        -3.0531133177191805e-16
+      ],
+      "matrix_rank": 4,
+      "constraint_count": 4,
+      "instrument_count": 4,
+      "singular_values": [
+        2.1473383186550907,
+        0.8064738265551953,
+        0.3491865120782473,
+        0.01719828446282012
+      ],
+      "scaled_residual_tolerance": 1e-10,
+      "asset_maturities": [
+        2.0,
+        4.0,
+        7.0,
+        10.0
+      ],
+      "net_present_value": 6.750155989720952e-14,
+      "net_dollar_dv01": [
+        1.2079226507921704e-17,
+        1.1368683772161604e-17,
+        -1.9895196601282805e-17
+      ],
+      "net_parallel_dollar_convexity": -1.1368683772161603e-12
+    }
+  },
+  "nodal_scenarios_bp": {
+    "parallel_up": [
+      100,
+      100,
+      100
+    ],
+    "parallel_down": [
+      -100,
+      -100,
+      -100
+    ],
+    "twist": [
+      100,
+      0,
+      -100
+    ],
+    "reverse_twist": [
+      -100,
+      0,
+      100
+    ],
+    "belly_up": [
+      0,
+      100,
+      0
+    ],
+    "belly_down": [
+      0,
+      -100,
+      0
+    ]
+  },
+  "nodal_results": {
+    "parallel": {
+      "parallel_up": {
+        "shock_kind": "linear nodal zero-rate shift",
+        "base_value": 0.0,
+        "full_repricing_change": 0.06174172548148693,
+        "linear_change": -1.887379141862766e-15,
+        "quadratic_term": 0.06555087997953328,
+        "second_order_change": 0.06555087997953139,
+        "second_order_error": -0.003809154498044462,
+        "taylor_remainder_bound": 0.010734270127213926,
+        "cashflow_shifts_bp": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "decimal_reference_change": "0.06174172548148736752513694245216648602177738141551838796749",
+        "decimal_reference_absolute_difference": 4.371503159461554e-16
+      },
+      "parallel_down": {
+        "shock_kind": "linear nodal zero-rate shift",
+        "base_value": 0.0,
+        "full_repricing_change": 0.0696136010914602,
+        "linear_change": 1.887379141862766e-15,
+        "quadratic_term": 0.06555087997953328,
+        "second_order_change": 0.06555087997953517,
+        "second_order_error": 0.00406272111192503,
+        "taylor_remainder_bound": 0.010734270127213926,
+        "cashflow_shifts_bp": [
+          -100.0,
+          -100.0,
+          -100.0
+        ],
+        "decimal_reference_change": "0.06961360109146037501776870436548847477222213604215651376629",
+        "decimal_reference_absolute_difference": 1.8041124150158794e-16
+      },
+      "twist": {
+        "shock_kind": "linear nodal zero-rate shift",
+        "base_value": 0.0,
+        "full_repricing_change": 2.5083459509579074,
+        "linear_change": 2.294280799283663,
+        "quadratic_term": 0.20714078073532485,
+        "second_order_change": 2.5014215800189876,
+        "second_order_error": 0.006924370938919594,
+        "taylor_remainder_bound": 0.0076259589287821766,
+        "cashflow_shifts_bp": [
+          100.0,
+          -20.0,
+          -100.0
+        ],
+        "decimal_reference_change": "2.50834595095790799433168486110577584173758313931779078572174",
+        "decimal_reference_absolute_difference": 4.440892098500626e-16
+      },
+      "reverse_twist": {
+        "shock_kind": "linear nodal zero-rate shift",
+        "base_value": 0.0,
+        "full_repricing_change": -2.0937224601560596,
+        "linear_change": -2.294280799283663,
+        "quadratic_term": 0.20714078073532485,
+        "second_order_change": -2.087140018548338,
+        "second_order_error": -0.0065824416077215064,
+        "taylor_remainder_bound": 0.0076259589287821766,
+        "cashflow_shifts_bp": [
+          -100.0,
+          20.0,
+          100.0
+        ],
+        "decimal_reference_change": "-2.09372246015605986470601923837085718917817536084034216682638",
+        "decimal_reference_absolute_difference": 4.440892098500626e-16
+      },
+      "belly_up": {
+        "shock_kind": "linear nodal zero-rate shift",
+        "base_value": 0.0,
+        "full_repricing_change": 3.8401518729721644,
+        "linear_change": 3.933052798771988,
+        "quadratic_term": -0.09439326717052772,
+        "second_order_change": 3.8386595316014605,
+        "second_order_error": 0.001492341370704045,
+        "taylor_remainder_bound": 0.0015845543356083262,
+        "cashflow_shifts_bp": [
+          0.0,
+          80.0,
+          0.0
+        ],
+        "decimal_reference_change": "3.84015187297216435537074083347734403177147020950321879301263",
+        "decimal_reference_absolute_difference": 0.0
+      },
+      "belly_down": {
+        "shock_kind": "linear nodal zero-rate shift",
+        "base_value": 0.0,
+        "full_repricing_change": -4.028974657111698,
+        "linear_change": -3.933052798771988,
+        "quadratic_term": -0.09439326717052772,
+        "second_order_change": -4.027446065942516,
+        "second_order_error": -0.0015285911691824,
+        "taylor_remainder_bound": 0.0015845543356083262,
+        "cashflow_shifts_bp": [
+          0.0,
+          -80.0,
+          0.0
+        ],
+        "decimal_reference_change": "-4.02897465711169853189038831064830240062219141187735480539228",
+        "decimal_reference_absolute_difference": 0.0
+      }
+    },
+    "keyrate": {
+      "parallel_up": {
+        "shock_kind": "linear nodal zero-rate shift",
+        "base_value": 6.750155989720952e-14,
+        "full_repricing_change": 0.00041952876463524635,
+        "linear_change": -7.771561172376096e-16,
+        "quadratic_term": -6.245004513516506e-17,
+        "second_order_change": -8.396061623727746e-16,
+        "second_order_error": 0.00041952876463608596,
+        "taylor_remainder_bound": 0.015056911650727567,
+        "cashflow_shifts_bp": [
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "decimal_reference_change": "0.00041952876463738210137710801787278784694103253085942441323",
+        "decimal_reference_absolute_difference": 2.135769859579195e-15
+      },
+      "parallel_down": {
+        "shock_kind": "linear nodal zero-rate shift",
+        "base_value": 6.750155989720952e-14,
+        "full_repricing_change": -0.00047297272452884176,
+        "linear_change": 7.771561172376096e-16,
+        "quadratic_term": -6.245004513516506e-17,
+        "second_order_change": 7.147060721024445e-16,
+        "second_order_error": -0.00047297272452955647,
+        "taylor_remainder_bound": 0.015056911650727567,
+        "cashflow_shifts_bp": [
+          -100.0,
+          -100.0,
+          -100.0,
+          -100.0,
+          -100.0
+        ],
+        "decimal_reference_change": "-0.00047297272453035895552523597713367174559434466727753897330",
+        "decimal_reference_absolute_difference": 1.5171783100675906e-15
+      },
+      "twist": {
+        "shock_kind": "linear nodal zero-rate shift",
+        "base_value": 6.750155989720952e-14,
+        "full_repricing_change": -0.07721109962541939,
+        "linear_change": -3.6637359812630166e-15,
+        "quadratic_term": -0.07365229642828587,
+        "second_order_change": -0.07365229642828953,
+        "second_order_error": -0.0035588031971298534,
+        "taylor_remainder_bound": 0.00477291767913376,
+        "cashflow_shifts_bp": [
+          100.0,
+          33.333333333333336,
+          -20.0,
+          -40.0,
+          -100.0
+        ],
+        "decimal_reference_change": "-0.07721109962541923871671628411248719709414674603555800056131",
+        "decimal_reference_absolute_difference": 1.5265566588595902e-16
+      },
+      "reverse_twist": {
+        "shock_kind": "linear nodal zero-rate shift",
+        "base_value": 6.750155989720952e-14,
+        "full_repricing_change": -0.07028002657150112,
+        "linear_change": 3.6637359812630166e-15,
+        "quadratic_term": -0.07365229642828587,
+        "second_order_change": -0.07365229642828221,
+        "second_order_error": 0.0033722698567810877,
+        "taylor_remainder_bound": 0.00477291767913376,
+        "cashflow_shifts_bp": [
+          -100.0,
+          -33.333333333333336,
+          20.0,
+          40.0,
+          100.0
+        ],
+        "decimal_reference_change": "-0.07028002657150094521811687380292572982603388744162388606837",
+        "decimal_reference_absolute_difference": 1.8041124150158794e-16
+      },
+      "belly_up": {
+        "shock_kind": "linear nodal zero-rate shift",
+        "base_value": 6.750155989720952e-14,
+        "full_repricing_change": -0.0038941263334693055,
+        "linear_change": -1.9984014443252818e-15,
+        "quadratic_term": -0.004067516142319696,
+        "second_order_change": -0.0040675161423216945,
+        "second_order_error": 0.00017338980885238907,
+        "taylor_remainder_bound": 0.0032224341527665582,
+        "cashflow_shifts_bp": [
+          0.0,
+          66.66666666666666,
+          80.0,
+          60.0,
+          0.0
+        ],
+        "decimal_reference_change": "-0.00389412633346929599121350823153252824351625917790136387965",
+        "decimal_reference_absolute_difference": 9.540979117872439e-18
+      },
+      "belly_down": {
+        "shock_kind": "linear nodal zero-rate shift",
+        "base_value": 6.750155989720952e-14,
+        "full_repricing_change": -0.004248238639962487,
+        "linear_change": 1.9984014443252818e-15,
+        "quadratic_term": -0.004067516142319696,
+        "second_order_change": -0.004067516142317698,
+        "second_order_error": -0.00018072249764478944,
+        "taylor_remainder_bound": 0.0032224341527665582,
+        "cashflow_shifts_bp": [
+          0.0,
+          -66.66666666666666,
+          -80.0,
+          -60.0,
+          0.0
+        ],
+        "decimal_reference_change": "-0.00424823863996384326474819076636333598681342999186515987725",
+        "decimal_reference_absolute_difference": 1.3556863964758747e-15
+      }
+    }
+  },
+  "off_grid": {
+    "definition": "h(t) = 100 max(0, 1 - |t-6|/0.5) bp",
+    "results": {
+      "parallel": {
+        "up": {
+          "shock_kind": "explicit cashflow-time zero-rate shift; not necessarily in nodal span",
+          "base_value": 0.0,
+          "full_repricing_change": 4.7717325869638065,
+          "linear_change": 4.916315998464985,
+          "quadratic_term": -0.14748947995394956,
+          "second_order_change": 4.768826518511036,
+          "second_order_error": 0.002906068452770749,
+          "taylor_remainder_bound": 0.003132194400921456,
+          "cashflow_shifts_bp": [
+            0.0,
+            100.0,
+            0.0
+          ]
+        },
+        "down": {
+          "shock_kind": "explicit cashflow-time zero-rate shift; not necessarily in nodal span",
+          "base_value": 0.0,
+          "full_repricing_change": -5.066800051179603,
+          "linear_change": -4.916315998464985,
+          "quadratic_term": -0.14748947995394956,
+          "second_order_change": -5.063805478418935,
+          "second_order_error": -0.0029945727606685013,
+          "taylor_remainder_bound": 0.003132194400921456,
+          "cashflow_shifts_bp": [
+            0.0,
+            -100.0,
+            0.0
+          ]
+        }
+      },
+      "keyrate": {
+        "up": {
+          "shock_kind": "explicit cashflow-time zero-rate shift; not necessarily in nodal span",
+          "base_value": 6.750155989720952e-14,
+          "full_repricing_change": 4.7717325869638065,
+          "linear_change": 4.916315998464985,
+          "quadratic_term": -0.14748947995394956,
+          "second_order_change": 4.768826518511036,
+          "second_order_error": 0.002906068452770749,
+          "taylor_remainder_bound": 0.003132194400921456,
+          "cashflow_shifts_bp": [
+            0.0,
+            0.0,
+            100.0,
+            0.0,
+            0.0
+          ]
+        },
+        "down": {
+          "shock_kind": "explicit cashflow-time zero-rate shift; not necessarily in nodal span",
+          "base_value": 6.750155989720952e-14,
+          "full_repricing_change": -5.066800051179603,
+          "linear_change": -4.916315998464985,
+          "quadratic_term": -0.14748947995394956,
+          "second_order_change": -5.063805478418935,
+          "second_order_error": -0.0029945727606685013,
+          "taylor_remainder_bound": 0.003132194400921456,
+          "cashflow_shifts_bp": [
+            0.0,
+            0.0,
+            -100.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    }
+  },
+  "max_decimal_change_difference": 2.135769859579195e-15,
+  "diagnostic": "Bounds are real-arithmetic Taylor formulas evaluated in float64, not directed-rounding certificates."
+}
